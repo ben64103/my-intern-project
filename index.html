@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- <input type="text">
+    <p id="message"></p> -->
+
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+            <div class="bar2">
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+            </div>
+        </div>
+    
+        <div class="buttons">
+            <button class="btn btn-prev" disabled>Prev</button>
+            <button class="btn btn-next">Next</button>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+    <script>
+        let input = document.querySelector('input');
+        let message = document.querySelector('#message');
+
+        // input.addEventListener('input', ()=> {
+        //     message.textContent = input.value;
+
+        //     let content = message.textContent;
+        //     message.textContent = content.replaceAll("Benjamin", "Ben***in")
+        // })
+
+        let {log, count} = console;
+        
+        let result = '    the javascript elements';
+
+        // let text = result;
+        // console.log(result.length)
+        // console.log(result.charAt(6))
+        // console.log(result.charAt(6).trim().length)
+        // console.log(result.trim().length) // return the untrimmed length
+        // console.log(result.endsWith('s')) 
+        // console.log(result.startsWith('d'))
+        // console.log(result.includes('javascript')) // true
+        // console.log(result.replace('javascript', 'python'))
+        // console.log(result.charAt(result.length - 1)); // returns the last value
+        // log(result.length)
+        // log(result.trim().toUpperCase().slice(0, 1))
+
+        // log(result.lastIndexOf('r'))
+        
+
+        function addValues(num1, num2){
+            return num1 + num2;
+        }
+
+        log(addValues(2, 3))
+
+        // Splitting a string into an array
+
+        let str = "one, two, three, four, five"
+        console.log(str.split(", "));
+        console.log(str.split(", ").join(" - "))
+
+        let subString = '01234567890'
+
+        console.log(subString.slice(0, 5))
+        console.log(subString.slice(1, 7))
+
+        let string = "Hello, World"
+        console.log(string.indexOf("o"))
+        console.log(string.indexOf(","))
+        console.log(string.indexOf("Ben"))
+
+    // Searching for strings
+
+    console.log(string.includes("Hello"));
+    console.log(string.replace("Hello", "Bye"));
+    console.log('qwerty'.toUpperCase())
+    console.log('BENJAMIN'.toLowerCase())
+
+    // Repeat a String
+
+    console.log(string.repeat(3))
+    console.log(string.repeat(0))
+    // console.log(string.repeat(-1))
+
+    const name = "John"
+    const age = 34;
+
+    const sentence = `Hey! it's ${name} and I am ${age} years old. And here is some simple math 4 * 4 which equals ${4 * 4}`
+
+    console.log(sentence)
+    // Arrays and property methods 
+
+    let names =  ['john', 'smith', 'chris', 'simon', 'ben'];
+
+    console.log(names.length)
+    console.log(names[names.length - 1])
+
+
+    const lastNames = ['pepper', 'onions', 'garlic'];
+
+    const allNames = names.concat(lastNames);
+    console.log(allNames)
+    console.log(allNames.length)
+    console.log(allNames.reverse())
+
+    function reverseString(str){
+        return str.split('').reverse().join('')
+    }
+
+    console.log(reverseString('string'))
+
+    </script>
+</body>
+</html>
