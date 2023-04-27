@@ -50,10 +50,17 @@
 
             message.textContent = string.slice(entry1, entry2)
 
-            if(entry2 > string.length  || entry1 > entry2 || entry2 <= 0 ){
+            if(entry1 < string.length){
+                message.textContent = string.slice(entry1, entry2)
+                message.textContent = 'git st'
+            }
+            else if(entry1 > string.length || entry2 > string.length  || entry1 > entry2 || entry2 <= 0 ){
                 error.textContent = 'range error!'
                 message.textContent = '';
             }
+            // else if (entry1 < entry2){
+            //     message.textContent = string.slice(entry1, entry2)
+            // }
             else {
                 error.textContent = ''
             }
