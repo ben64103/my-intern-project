@@ -56,20 +56,34 @@ for (let i = 0; i < liEvenItems.length; i++) {
 
 console.log(items)
 
-const numbers = [3, 4, 5, 6];
+const numbers = [3, 4, 5, 6, 45, 50, 69, 55];
 let value;
 // Add to front
-numbers.unshift(1, 2)
+// numbers.unshift(1, 2)
 
-// Add to end
-numbers.push(7, 8)
+// // Add to end
+// numbers.push(7, 8)
 
-// Remove from front
-numbers.shift()
+// // Remove from front
+// numbers.shift()
 
-// Remove front end
-numbers.pop()
+// // Remove front end
+// numbers.pop()
+
+// Find
+
+function under50(age){
+    return age < 50;
+}
+
+function over50(age){
+    return age > 50
+}
+
+value = numbers.find(under50)
+value = numbers.find(over50)
 
 
 console.log(numbers)
 console.log(value)
+
