@@ -24,7 +24,7 @@ function sliceValues(valueOne, valueTwo){
   }
   else if(valueOne > valueTwo){
     message.textContent = ""
-    error.textContent = 'value two must be greater'
+    error.textContent = 'second input value must be greater'
   }
   else{
     error.textContent = ''
