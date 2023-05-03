@@ -17,7 +17,7 @@ body {
     text-align: center;
 }
 
-.container input{
+.container input, #sentence{
     display: block;
     width: 40%;
     padding: 0.7rem;
@@ -40,6 +40,9 @@ body {
 }
 #btn:focus {
 	transform: scale(1.03);
+}
+#sentence{
+    width: 70% ;
 }
 #error {
     color: red;

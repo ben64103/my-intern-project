@@ -3,27 +3,38 @@ const secEntry = document.getElementById('secondSlice')
 const message = document.querySelector('.message')
 const btn = document.querySelector('#btn')
 
+const input = document.querySelector('#sentence')
+
 let error = document.querySelector('#error')
 
-let string = "Slice my letters"
-message.textContent = string;
+// message.textContent = string;
+
+input.setAttribute('placeholder', 'enter random value')
 
 function sliceValues(valueOne, valueTwo){
   valueOne = firstEntry.value;
   valueTwo = secEntry.value;
 
-  message.textContent = string.slice(valueOne, valueTwo)
+    
+  input.addEventListener('input', function(){
+    let string = input.value;
+  
+    sentence = string;
+  })
 
-  if(valueTwo > string.length || valueOne == valueTwo) {
-    message.textContent = ''
-    error.textContent = 'range error!'
-  }
-  else if((valueOne && valueTwo) == ""){
-    message.textContent  = ''
+  
+  input.value = sentence.slice(valueOne, valueTwo)
+
+  if((valueOne && valueTwo) == ""){
+    sentence  = ''
     error.textContent = 'enter values'
   }
+  else if(valueTwo > input.value.length || valueOne == valueTwo) {
+    input.value = ''
+    error.textContent = 'range error!'
+  }
   else if(valueOne > valueTwo){
-    message.textContent = ""
+    input.value = ""
     error.textContent = 'second input value must be greater'
   }
   else{
