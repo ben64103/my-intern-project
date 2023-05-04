@@ -96,4 +96,5 @@ body {
    color: orangered;
    font-size: 25px;
    font-weight: bold;
+   cursor: pointer;
 }
