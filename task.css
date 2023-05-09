@@ -86,8 +86,7 @@ body {
    font-size: 17px;
 }
 .container .row .card-action ul li:first-child{
-   border-radius: 5px 5px 0 0;
-}
+   border-radius: 5px 5px 0 0;}
 .container .row .card-action ul li:last-child {
    border-radius: 0 0 5px 5px;
    border-bottom: 1px solid lightgray;
@@ -97,4 +96,12 @@ body {
    font-size: 25px;
    font-weight: bold;
    cursor: pointer;
+   transition:all 0.3s ease;
+}
+.container .row .card-action ul li a:hover {
+   color: lightgray;
+}
+input:focus{
+   outline: none;
+   border-bottom-color: red !important;
 }

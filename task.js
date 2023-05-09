@@ -117,14 +117,9 @@
 
 document.body.addEventListener('click', deleteItem)
 
-function deleteItem(event){
-    // console.log(event.target);
-
-    // if(event.target.parentElement.className = 'delete-item secondary-content'){
-    //     console.log('delete item');
-    // }
-
-    if(event.target.parentElement.classList.contains('delete-item')){
-      event.target.parentElement.parentElement.remove()
-    }
+function deleteItem(e){
+//   console.log(e.target);
+  if(e.target.parentElement.classList.contains('delete-item')){
+    e.target.parentElement.parentElement.remove()
+  }
 }

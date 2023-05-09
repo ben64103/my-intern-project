@@ -1,65 +1,63 @@
 * {
-    font-family: cursive;
+  font-family: cursive;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    /* overflow: hidden; */
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* overflow: hidden; */
 }
 
 .progress-container {
-    height: 5px;
-    background-color: gray;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: -2;
+  height: 5px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: -2;
 }
 
 .progress-bar {
-    height: 5px;
-    width: 25%;
-    z-index: -2;
-    background-color: firebrick;
-    position: absolute;
+  height: 5px;
+  width: 25%;
+  z-index: -2;
+  background-color: firebrick;
+  position: absolute;
 }
 
 .bar2 {
-    display: flex;
-    gap: 3.5rem;
+  display: flex;
+  gap: 3.5rem;
 }
 
 .num {
-    border: 3px solid gray;
-    background-color: white;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
+  border: 3px solid gray;
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 40px auto 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 40px auto 0;
 }
 
 .buttons .btn {
-    width: 6rem;
-    height: 2.4rem;
-    border: 2px solid gray;
-    border-radius: 5px;
-    cursor: pointer;
+  width: 6rem;
+  height: 2.4rem;
+  border: 2px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .buttons .btn:disabled {
-    cursor: not-allowed;
-    border: 2px solid lightgray;
+  cursor: not-allowed;
+  border: 2px solid lightgray;
 }

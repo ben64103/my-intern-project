@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>*{font-family: Tahoma;}</style>
+  </head>
+  <body>
+    <script>
+      for (let index = 1; index <= 12; index++) {
+        document.write(` 2 × ${index} = ${2 * index}<br>`);
+      }
+
+      // localStorage.setItem('name', 'John')
+      // localStorage.setItem('name', 'Chris')
+      // localStorage.setItem('age', 30)
+
+      const name = localStorage.getItem("name");
+      const age = localStorage.getItem("age");
+
+      localStorage.clear()
+
+      console.log(name, age);
+    </script>
+  </body>
+</html>
