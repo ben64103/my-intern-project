@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="startGame">Start  Game</button>
+
+    <div class="box" id="box"></div>
+    
+
+    <script>
+        let delay = 0
+        let reactionTime = 0
+        let run
+        let score = ''
+        let isPlaying = false
+
+        function detectIsPlaying(){
+            if (isPlaying === true) {
+                startGame.disabled = true
+            }else{
+                startGame.disabled = false
+            }
+        }
+
+        startGame.addEventListener('click', function(){
+            isPlaying = true
+           
+            detectIsPlaying()
+            delay = 2000 + Math.random() * 5000;
+            // console.log(delay, 'delay')
+            setTimeout(() => {
+                box.style.display = 'block'
+               run = setInterval(() => {
+                    reactionTime++
+                    console.log('interval running')
+                }, 10);
+            }, delay);
+
+
+
+        })
+
+        box.addEventListener('click', function(){
+            clearInterval(run)
+            isPlaying= false
+            detectIsPlaying()
+            console.log(reactionTime)
+            if (reactionTime < 20) {
+                alert('you are very fast')
+            }else if(reactionTime < 100){
+                alert('you are litte bit fast')
+            }else if(reactionTime < 200){
+                alert('you need to work more hard next time')
+            }else{
+                alert('you to slow')
+            }
+        })
+
+    </script>
+</body>
+</html>

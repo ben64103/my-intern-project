@@ -5,33 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{
+      font-family: Tahoma;
+    }
+  </style>
 </head>
 <body>
   
+  <input type="text" id="name">
+  <input type="text" id="email">
+  <button id="btn">Push</button>
+  <div id="display"></div>
 
-  <!-- <ul></ul>
-  <button>Append Element</button>
-  
   <script>
-    const list = document.querySelector('ul');
+    const username = document.getElementById('name')
+    const email = document.getElementById('email')
+    const btn = document.getElementById('btn').addEventListener('click', pushUser)
 
-    const listItem = document.createElement('li')
 
-    const btn = document.querySelector('button');
     
-    btn.addEventListener('click', appendEl) 
-    function appendEl(){
-        
-      list.appendChild(listItem)
-      listItem.innerHTML = 'Link one'
-    }</script> -->
-
-
-    <script>
-      // for(let index = 1; index <= 12; index++){
-      //   document.write(index)
-      // }
-    </script>
-  
+  </script>
 </body>
 </html>

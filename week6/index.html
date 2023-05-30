@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <input type="text" id="userName">
+  <input type="text" id="userEmail">
+
+  
+  <button onclick="pushUser()">Push</button>
+
+  <div id="display"></div>
+
+
+
+
+
+  <script>
+    let user = []
+
+   function getExistingUserAndSaveToUserArray(){
+    // get all the existing user
+    let oldUsers = JSON.parse(localStorage.getItem('users'))
+
+    // check if there is an existing user
+    if (oldUsers) {
+      // if there is an existing user we save them to [user] array 
+      user = oldUsers
+    }
+   }
+   getExistingUserAndSaveToUserArray()
+
+    console.log(oldUsers, 'am the one')
+    
+
+
+    function pushUser(){
+      let person  = {
+        name: userName.value,
+        email: userEmail.value
+      }
+
+      user.push(person)
+
+      localStorage.setItem('users', JSON.stringify(user))
+
+
+      displayUser()
+    }
+
+    function displayUser(){
+      display.innerHTML = ''
+      let users = JSON.parse(localStorage.getItem('users'))
+      users&& users.forEach((per, index)=>{
+        display.innerHTML += `
+          <div>
+            <small>${index + 1}</small>
+            <p>${per.name}</p>
+            <p>${per.email}</p>
+          </div>
+        `
+      })
+
+    }
+
+
+    displayUser()
+
+  </script>
+</body>
+</html>

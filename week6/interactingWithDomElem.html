@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .test{
+            width: 300px;
+            height: 300px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+
+    <button id="addButt" onclick="addClass()">Add a class</button>
+    <button id="removeButt" onclick="removeClass()">remove a class</button>
+ 
+    <script>
+
+        // box.style.backgroundColor = 'green'
+        // box.style.width = '300px'
+        // box.style.height = '300px'
+
+        function addClass(){
+            box.classList.add('test')
+            checkThing()
+        }
+        function removeClass(){
+            box.classList.remove('test')
+            checkThing()
+        }
+        
+        function checkThing(){
+            if (box.classList.contains('test')) {
+            removeButt.style.display = 'block'
+            addButt.style.display = 'none'
+            }else{
+                removeButt.style.display = 'none'
+                addButt.style.display = 'block'
+            }
+        }
+
+        checkThing()
+
+    </script>
+    
+</body>
+</html>

@@ -1,9 +1,15 @@
-const form = document.querySelector('#task-form')
-form.addEventListener('submit', (e)=>{
-  let task = document.getElementById('task').value
-  // console.log(task);
-  let tasks = [];
-  localStorage.setItem("task", tasks) 
+// const form = document.querySelector('#task-form')
 
-  e.preventDefault()
-})
+// form.addEventListener("submit", (e)=>{
+
+//   const task = document.getElementById("task").value
+//   localStorage.setItem('task','John')
+
+//   let tasks;
+
+//   if(localStorage.getItem('tasks') === null){
+
+//   }
+//   e.preventDefault();
+// })
+

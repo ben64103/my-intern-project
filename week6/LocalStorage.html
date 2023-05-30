@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="userName">
+    <input type="text" id="email">
+
+    <button onclick="pushUser()">Push</button>
+
+    <div id="display"></div>
+
+
+
+    <script>
+
+        let users = [
+            
+        ]
+
+        function pushUser(){
+            let obj = {
+                name: userName.value,
+                email: email.value
+            }
+
+            users.push(obj)
+
+            localStorage.setItem('userList', JSON.stringify(users))
+
+            displayUser()
+        }
+
+
+        function displayUser(){
+            let userslist = JSON.parse(localStorage.getItem('userList'))
+            console.log(userslist)
+
+            userslist.forEach((elem, i)=>{
+                display.innerHTML += `
+                <ul>
+                    <li>${i+1}</li>
+                    <li>${elem.email}</li>
+                    <li>${elem.name}</li>
+                </ul>
+                `
+            })
+
+
+
+
+
+            // userslist.forEach(elem => {
+            //     display.innerHTML+=`
+            // <ul>
+            //     <li>${elem.name}</li>
+            //     <li>${elem.email}</li>
+            // </ul>
+            // `
+            // });
+           
+        }
+
+
+        displayUser()
+
+
+
+
+
+
+
+
+
+        // let numb = 50
+
+        // let obj = {
+        //     name: 'ben',
+        //     career: 'web dev',
+        //     gender: 'male'
+        // }
+
+        // localStorage.setItem('user', JSON.stringify(obj))
+
+        
+    //    let user =  JSON.parse(localStorage.getItem('user'))
+    //    console.log(user)
+
+    //    display.innerHTML = `
+    //    <p>${user.name}</p>
+    //    <span>${user.career}</span>
+    //    <p>${user.gender}</p>
+    //    `
+
+    //    localStorage.removeItem('user')
+
+
+
+
+    </script>
+</body>
+</html>

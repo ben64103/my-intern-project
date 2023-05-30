@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="./ass.css">
+</head>
+<body>
+
+	<div id="counter">
+100
+	</div>
+	<script>
+
+		let minutureRead = 100
+		let greenLight = false
+		let greenLightCountDown = 20
+
+		// function light(){
+
+			
+		// }
+
+		//  setInterval(() => {
+		// 		red.style.backgroundColor = 'red'
+		// 	}, 000);
+
+
+
+		function countDown(){
+			setInterval(() => {
+				if (!greenLight) {
+					red.style.backgroundColor = 'red'
+				minutureRead --
+				counter.innerHTML = minutureRead
+
+				if (minutureRead <= 50) {
+					red.style.backgroundColor = 'transparent'
+					yellow.style.backgroundColor = 'yellow'
+
+				}
+				if (minutureRead <= 1) {
+					yellow.style.backgroundColor = 'transparent'
+					green.style.backgroundColor = 'green'
+					greenLight = true
+
+					setInterval(() => {
+						greenLightCountDown --
+						counter.innerHTML = greenLightCountDown
+						if (greenLightCountDown <=1) {
+							greenLight = false
+							minutureRead = 100
+							green.style.backgroundColor = 'transparent'
+						}
+					}, 1000);
+				}
+				}
+
+			}, 100);
+		}
+
+		countDown()
+
+
+	</script>
+</body>
+</html>
